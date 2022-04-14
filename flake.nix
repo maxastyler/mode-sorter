@@ -25,10 +25,6 @@
         };
       in
       {
-        apps = {
-          mode-sorter = pkgs.mode-sorter;
-        };
-
-        defaultApp = pkgs.mode-sorter;
+        defaultPackage = pkgs.mode-sorter;
       }));
 }
