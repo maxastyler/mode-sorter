@@ -1,5 +1,5 @@
 {
-  description = "Application packaged using poetry2nix";
+  description = "mode-sorter packaged using poetry2nix";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
@@ -12,7 +12,7 @@
         poetry2nix.overlay
         (final: prev: {
           # The application
-          myapp = prev.poetry2nix.mkPoetryApplication {
+          mode-sorter = prev.poetry2nix.mkPoetryApplication {
             projectDir = ./.;
           };
         })
@@ -26,9 +26,9 @@
       in
       {
         apps = {
-          myapp = pkgs.myapp;
+          mode-sorter = pkgs.mode-sorter;
         };
 
-        defaultApp = pkgs.myapp;
+        defaultApp = pkgs.mode-sorter;
       }));
 }
