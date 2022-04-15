@@ -14,6 +14,8 @@
           # The application
           mode-sorter = prev.poetry2nix.mkPoetryApplication {
             projectDir = ./.;
+            propagatedBuildInputs = [];
+            python = final.python310;
           };
         })
       ];
